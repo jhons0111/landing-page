@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sushi Sakura</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/35ad73f305.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Sakura</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#book">Reservas</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <img src="/images/fondo.jpeg" alt="" class="hero-image">
+                <div class="text-content">
+                    <h2>Bienvenido al sushi Sakura</h2>
+                    <p>La mejor experiencia gastronomica</p>
+                    <a href="#menu" class="btn">Ver menú</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu" class="menu-section">
+            <h2>Nuestro menu</h2>
+            <div class="menu-grid">
+                <article class="menu-item">
+                    <img src="/images/sushi1.jpeg" alt="Sushi Mix">
+                    <h3>Sushi mix</h3>
+                    <p>Selección variada de migiris y makis</p>
+                    <span class="price">20USD</span>
+                </article>
+                <article class="menu-item">
+                    <img src="/images/sushi2.jpeg" alt="Sashimi Deluxe">
+                    <h3>Sashimi Deluxe</h3>
+                    <p>Selección deluxe</p>
+                    <span class="price">20USD</span>
+                </article>
+                <article class="menu-item">
+                    <img src="/images/sushi3.jpeg" alt="Sushi Premium">
+                    <h3>Sushi Premium</h3>
+                    <p>Selección pemium</p>
+                    <span class="price">20USD</span>
+                </article>
+            </div>
+        </section>
+
+        <section id="book" class="book-section">
+            <h2>Reserva tu mesa</h2>
+            <form class="book-form" action="">
+                <input type="text" placeholder="Nombre completo" required>
+                <input type="email" name="" id="" placeholder="Email">
+                <input type="tel" name="" id="" placeholder="Telefono">
+                <input type="date" name="" id="">
+                <input type="time" name="" id="">
+                <select name="" id="">
+                    <option value="">Número de personas</option>
+                    <option value="1">1 persona</option>
+                    <option value="2">2 persona</option>
+                    <option value="3">3 persona</option>
+                    <option value="4">4 persona</option>
+                    <option value="5">5 persona</option>
+                </select>
+
+                <button type="submit" class="btn">Reservar</button>
+            </form>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Contacto</h2>
+            <div class="contact-info">
+                <div>
+                    <i class="fas fa-map"></i>
+                    <p>Main street 123, Atlanta</p>
+                </div>
+                <div>
+                    <i class="fas fa-phone"></i>
+                    <p>3222221247</p>
+                </div>
+                <div>
+                    <i class="fas fa-envelope"></i>
+                    <p>myemail@email.com</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <p>&copy; Sushi Sakura; Todos los derechos reservados</p>
+    </footer>
+
+</body>
+</html>
