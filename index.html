@@ -6,6 +6,7 @@
     <title>Sushi Sakura</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://kit.fontawesome.com/35ad73f305.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
     <header>
@@ -23,13 +24,42 @@
     </header>
     <main>
         <section id="inicio" class="hero">
-            <div class="hero-content">
-                <img src="/images/fondo.jpeg" alt="" class="hero-image">
-                <div class="text-content">
-                    <h2>Bienvenido al sushi Sakura</h2>
-                    <p>La mejor experiencia gastronomica</p>
-                    <a href="#menu" class="btn">Ver menú</a>
+            <div class="swiper hero-content">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <picture class="hero_picture">
+                            <source srcset="/images/sushi_mobile_3.jpg" media="(width <= 480px)">
+                            <img src="/images/sushi_3.jpeg" alt="Best SEO practices" class="hero-image">
+                        </picture>
+                        <div class="text-content">
+                            <h2>Bienvenido al sushi Sakura</h2>
+                            <p>La mejor experiencia gastronomica</p>
+                            <a href="#menu" class="btn">Ver menú</a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture class="hero_picture">
+                            <source srcset="/images/sushi_mobile_1.jpg" media="(width <= 480px)">
+                            <img src="/images/sushi_1.jpg" alt="Best SEO practices" class="hero-image">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture class="hero_picture">
+                            <source srcset="/images/sushi_mobile_2.jpg" media="(width <= 480px)">
+                            <img src="/images/sushi_2.jpg" alt="Best SEO practices" class="hero-image">
+                        </picture>
+                    </div>
                 </div>
+
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
             </div>
         </section>
 
@@ -101,5 +131,7 @@
         <p>&copy; Sushi Sakura; Todos los derechos reservados</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
