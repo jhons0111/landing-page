@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-labelledby="title desc">
+  <title id="title">Bol de ramen</title>
+  <desc id="desc">Ilustracion de un bol de ramen con caldo, fideos, huevo y toppings.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2b1110"/>
+      <stop offset="1" stop-color="#7d2f20"/>
+    </linearGradient>
+    <linearGradient id="broth" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d88936"/>
+      <stop offset="1" stop-color="#8d331f"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="18" stdDeviation="14" flood-color="#160908" flood-opacity=".5"/>
+    </filter>
+  </defs>
+  <rect width="640" height="480" fill="url(#background)"/>
+  <circle cx="90" cy="80" r="120" fill="#e7a85b" opacity=".12"/>
+  <circle cx="570" cy="420" r="150" fill="#f5d18b" opacity=".1"/>
+  <g fill="none" stroke="#f5d99c" stroke-linecap="round" stroke-width="8" opacity=".48">
+    <path d="M230 105c-22-35 28-42 5-78"/>
+    <path d="M315 95c-20-34 30-45 5-80"/>
+    <path d="M398 108c-20-32 28-44 5-77"/>
+  </g>
+  <g filter="url(#shadow)">
+    <ellipse cx="320" cy="348" rx="220" ry="61" fill="#4b1516"/>
+    <path d="M113 259h414v86c0 72-92 111-207 111S113 417 113 345z" fill="#f3eee0"/>
+    <path d="M113 285h414v60c0 71-92 111-207 111S113 416 113 345z" fill="#d83d2c"/>
+    <path d="M142 289c23 47 89 70 178 70s155-23 178-70" fill="none" stroke="#ff7760" stroke-width="12" opacity=".55"/>
+    <ellipse cx="320" cy="267" rx="207" ry="80" fill="#f2dfbb"/>
+    <ellipse cx="320" cy="260" rx="183" ry="63" fill="url(#broth)"/>
+    <path d="M168 263c47-39 91 35 133-2s76 36 121-2" fill="none" stroke="#f7c35f" stroke-linecap="round" stroke-width="11"/>
+    <path d="M175 282c42-34 83 27 126-4s79 28 125-4" fill="none" stroke="#f4ad42" stroke-linecap="round" stroke-width="8"/>
+    <path d="M205 235c31-24 63 22 95-3s62 20 101-2" fill="none" stroke="#ffdc76" stroke-linecap="round" stroke-width="9"/>
+    <path d="M245 211c-8-20 4-43 26-51 31-11 57 13 50 43-6 27-37 40-59 27-10-6-16-11-17-19z" fill="#f7e0a0"/>
+    <path d="M256 207c-3-13 5-27 18-32 17-6 31 6 28 23-4 15-21 24-34 17-7-3-11-5-12-8z" fill="#ec9d43"/>
+    <path d="M362 224l34-54 25 12-32 61z" fill="#263d28"/>
+    <path d="M382 184l27-12 9 5-31 16z" fill="#4d7544"/>
+    <path d="M406 278c22-16 42-29 64-32l10 25c-24 8-44 21-62 37z" fill="#77a94d"/>
+    <path d="M420 262l49-4" stroke="#d7e78d" stroke-width="5"/>
+    <path d="M220 257l-35-31 14-17 41 30z" fill="#e8f0c0"/>
+    <path d="M190 226l18-4" stroke="#80a85b" stroke-width="6"/>
+    <ellipse cx="320" cy="324" rx="145" ry="18" fill="#711e1e" opacity=".26"/>
+  </g>
+  <g fill="#f2d49b" opacity=".8">
+    <circle cx="120" cy="390" r="5"/><circle cx="545" cy="118" r="4"/><circle cx="510" cy="84" r="7"/>
+  </g>
+</svg>

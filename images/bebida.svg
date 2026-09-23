@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-labelledby="title desc">
+  <title id="title">Bebida japonesa</title>
+  <desc id="desc">Vaso frio de bebida con hielo, limon y pajita.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#102d35"/><stop offset="1" stop-color="#17655d"/>
+    </linearGradient>
+    <linearGradient id="drink" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b9f0c1"/><stop offset="1" stop-color="#38a86d"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="18" stdDeviation="14" flood-color="#061719" flood-opacity=".5"/></filter>
+  </defs>
+  <rect width="640" height="480" fill="url(#background)"/>
+  <circle cx="100" cy="100" r="130" fill="#d8f2b0" opacity=".12"/><circle cx="555" cy="405" r="150" fill="#e4b96b" opacity=".1"/>
+  <g filter="url(#shadow)">
+    <path d="M253 113l80-54" stroke="#f2a64b" stroke-width="14" stroke-linecap="round"/>
+    <path d="M326 65l42 28" stroke="#f5d47b" stroke-width="14" stroke-linecap="round"/>
+    <path d="M218 137h227l-21 247c-4 39-38 62-92 62s-88-23-92-62z" fill="#dff8ed" opacity=".78"/>
+    <path d="M223 206h217l-16 178c-4 31-31 47-92 47s-88-16-92-47z" fill="url(#drink)" opacity=".92"/>
+    <ellipse cx="331" cy="139" rx="114" ry="31" fill="#e9fff5" opacity=".9"/>
+    <ellipse cx="331" cy="143" rx="99" ry="22" fill="#65c783"/>
+    <g fill="#f5ffff" opacity=".8">
+      <path d="M270 166l38-18 30 32-38 19z"/><path d="M343 153l38-10 23 31-38 13z"/><path d="M394 173l27-7 16 26-30 10z"/>
+    </g>
+    <path d="M254 262c44 18 103 24 167 8" fill="none" stroke="#eaffee" stroke-width="7" opacity=".55"/>
+    <circle cx="388" cy="260" r="25" fill="#f4d56b"/><path d="M369 271l37-22" stroke="#fff1a3" stroke-width="5"/>
+    <path d="M235 384h190" stroke="#b5f0dc" stroke-width="8" opacity=".7"/>
+  </g>
+  <g fill="#d7f1b0" opacity=".8"><circle cx="116" cy="389" r="6"/><circle cx="530" cy="100" r="5"/><circle cx="495" cy="72" r="8"/></g>
+</svg>

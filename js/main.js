@@ -29,12 +29,15 @@ const swiper = new Swiper('.swiper', {
 const cart = [
   { name: 'Roll Dragón Especial', price: 14.5, quantity: 2, image: 'images/sushi1.jpeg' },
   { name: 'Nigiri Salmón (4 pcs)', price: 9, quantity: 1, image: 'images/sushi2.jpeg' },
+  { name: 'Gyozas', price: 5, quantity: 1, image: 'images/sushi3.jpeg' },
+  { name: 'Ramen', price: 12, quantity: 1, image: 'images/ramen.svg' },
+  { name: 'Bebida', price: 6, quantity: 1, image: 'images/bebida.svg' },
+  { name: 'Postre', price: 8, quantity: 1, image: 'images/postre.svg' },
 ];
 
 const cartButton = document.querySelector('#cart-btn');
 const cartDrawer = document.querySelector('#cart-drawer');
 const cartBackdrop = document.querySelector('#cart-backdrop');
-const cartItems = document.querySelector('#cart-items');
 
 const money = (amount) => `$${amount.toFixed(2)}`;
 
@@ -45,10 +48,8 @@ function renderCart() {
 
   document.querySelector('#cart-count').textContent = itemCount;
   document.querySelector('#drawer-count').textContent = itemCount;
-  document.querySelector('#cart-subtotal').textContent = money(subtotal);
-  document.querySelector('#cart-service').textContent = money(service);
-  document.querySelector('#cart-total').textContent = money(subtotal + service);
-  cartItems.innerHTML = cart.map((item, index) => `
+  cartDrawer.querySelectorAll('.cart-item, .cart-summary-line, .cart-total, .confirm-order').forEach((element) => element.remove());
+  cartDrawer.insertAdjacentHTML('beforeend', `${cart.map((item, index) => `
     <article class="cart-item">
       <img src="${item.image}" alt="${item.name}">
       <div class="cart-item-info">
@@ -60,7 +61,11 @@ function renderCart() {
         </div>
       </div>
     </article>
-  `).join('');
+  `).join('')}
+    <p class="cart-summary-line cart-subtotal-line"><span>Subtotal:</span><strong id="cart-subtotal">${money(subtotal)}</strong></p>
+    <p class="cart-summary-line cart-service-line"><span>Servicio (10%):</span><strong id="cart-service">${money(service)}</strong></p>
+    <p class="cart-summary-line cart-total"><span>Total:</span><strong id="cart-total">${money(subtotal + service)}</strong></p>
+    <button class="confirm-order" type="button">Confirmar Pedido</button>`);
 }
 
 function setCartOpen(isOpen) {
@@ -76,7 +81,7 @@ document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') setCartOpen(false);
 });
 
-cartItems.addEventListener('click', (event) => {
+cartDrawer.addEventListener('click', (event) => {
   const control = event.target.closest('button[data-action]');
   if (!control) return;
 
