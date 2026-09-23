@@ -19,6 +19,7 @@
                 <li><a href="#menu">Menu</a></li>
                 <li><a href="#book">Reservas</a></li>
                 <li><a href="#contact">Contacto</a></li>
+                <li><button class="cart-btn" id="cart-btn" type="button" aria-controls="cart-drawer" aria-expanded="false"><i class="fas fa-shopping-basket"></i><span>Tu orden</span><b id="cart-count">3</b></button></li>
             </ul>
         </nav>
     </header>
@@ -71,18 +72,21 @@
                     <h3>Sushi mix</h3>
                     <p>Selección variada de migiris y makis</p>
                     <span class="price">20USD</span>
+                    <button class="add-to-cart" type="button" data-name="Sushi mix" data-price="20" data-image="images/sushi1.jpeg">Añadir</button>
                 </article>
                 <article class="menu-item">
                     <img src="images/sushi2.jpeg" alt="Sashimi Deluxe">
                     <h3>Sashimi Deluxe</h3>
                     <p>Selección deluxe</p>
                     <span class="price">20USD</span>
+                    <button class="add-to-cart" type="button" data-name="Sashimi Deluxe" data-price="20" data-image="images/sushi2.jpeg">Añadir</button>
                 </article>
                 <article class="menu-item">
                     <img src="images/sushi3.jpeg" alt="Sushi Premium">
                     <h3>Sushi Premium</h3>
                     <p>Selección pemium</p>
                     <span class="price">20USD</span>
+                    <button class="add-to-cart" type="button" data-name="Sushi Premium" data-price="20" data-image="images/sushi3.jpeg">Añadir</button>
                 </article>
             </div>
         </section>
@@ -130,6 +134,21 @@
     <footer>
         <p>&copy; Sushi Sakura; Todos los derechos reservados</p>
     </footer>
+
+    <div class="cart-backdrop" id="cart-backdrop"></div>
+    <aside class="cart-drawer" id="cart-drawer" aria-labelledby="cart-title" aria-hidden="true">
+        <div class="cart-header">
+            <h2 id="cart-title">Tu orden <span>(<b id="drawer-count">3</b>)</span></h2>
+            <button class="cart-close" id="cart-close" type="button" aria-label="Cerrar pedido"></button>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-summary">
+            <p><span>Subtotal:</span><strong id="cart-subtotal">$0.00</strong></p>
+            <p><span>Servicio (10%):</span><strong id="cart-service">$0.00</strong></p>
+            <p class="cart-total"><span>Total:</span><strong id="cart-total">$0.00</strong></p>
+            <button class="confirm-order" type="button">Confirmar Pedido</button>
+        </div>
+    </aside>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>

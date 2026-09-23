@@ -20,7 +20,7 @@ if ($num > 0) {
     }
 
     // Return all menu data
-    echo json_encode(["data" => $plates]);
+    echo json_encode(["data" => $plates, "test_data" => $plates] );
 } else {
 
     // Return this, if the menu is empty
