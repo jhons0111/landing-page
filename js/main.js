@@ -38,6 +38,7 @@ const cart = [
 const cartButton = document.querySelector('#cart-btn');
 const cartDrawer = document.querySelector('#cart-drawer');
 const cartBackdrop = document.querySelector('#cart-backdrop');
+const cartClose = document.querySelector('#cart-close');
 
 const money = (amount) => `$${amount.toFixed(2)}`;
 
@@ -48,8 +49,8 @@ function renderCart() {
 
   document.querySelector('#cart-count').textContent = itemCount;
   document.querySelector('#drawer-count').textContent = itemCount;
-  cartDrawer.querySelectorAll('.cart-item, .confirm-order').forEach((element) => element.remove());
-  cartDrawer.insertAdjacentHTML('beforeend', `${cart.map((item, index) => `
+  cartDrawer.querySelectorAll('.cart-content, .cart-summary').forEach((element) => element.remove());
+  cartDrawer.insertAdjacentHTML('beforeend', `<div class="cart-content">${cart.map((item, index) => `
     <div class="cart-item">
       <img src="${item.image}" alt="${item.name}">
       <div class="cart-item-info">
@@ -61,11 +62,13 @@ function renderCart() {
         </div>
       </div>
     </div>
-  `).join('')}
+  `).join('')}</div>
+  <div class="cart-summary">
     <div class="cart-item"><span>Subtotal:</span><strong id="cart-subtotal">${money(subtotal)}</strong></div>
     <div class="cart-item"><span>Servicio (10%):</span><strong id="cart-service">${money(service)}</strong></div>
     <div class="cart-item"><span>Total:</span><strong id="cart-total">${money(subtotal + service)}</strong></div>
-    <button class="confirm-order" type="button">Confirmar Pedido</button>`);
+    <button class="confirm-order" type="button">Confirmar Pedido</button>
+  </div>`);
 }
 
 function setCartOpen(isOpen) {
@@ -76,6 +79,7 @@ function setCartOpen(isOpen) {
 }
 
 cartButton.addEventListener('click', () => setCartOpen(true));
+cartClose.addEventListener('click', () => setCartOpen(false));
 cartBackdrop.addEventListener('click', () => setCartOpen(false));
 document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') setCartOpen(false);
