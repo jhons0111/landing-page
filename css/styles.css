@@ -35,8 +35,14 @@ nav {
 }
 
 .nav-links {
+    align-items: center;
     display: flex;
     list-style: none;
+}
+
+.nav-links li {
+    align-items: center;
+    display: flex;
 }
 
 .nav-links li a {
@@ -99,32 +105,35 @@ nav {
 /* HERO SECTION */
 
 .hero-content {
-    height: 100vh;
+    height: 50vh;
     position: relative;
 }
 
 .hero-content img {
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit: fill;
 }
 
 .hero-content .text-content {
     position: absolute;
-    top: 0;
-    height: 100%;
-    width: 100%;
+    top: 30%;
+    height: 55%;
+    width: 55%;
+    left: 45%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-direction: column;
-    color: #fff;
+    color: #111;
     text-align: center;
+    pointer-events: none;
 }
 
 .text-content h2 {
     font-size: 40px;
-    line-height: 1.5;
+    line-height: 0.35;
+    white-space: nowrap;
 }
 
 .text-content p {
@@ -137,7 +146,9 @@ nav {
     background-color: #ff0000;
     text-decoration: none;
     color: #fff;
-    margin-top: 15px;
+    margin-top: -30px;
+    position: relative;
+    top: -18px;
     border-radius: 5px;
 }
 
@@ -154,18 +165,23 @@ nav {
     height: 70px;
     width: 50px;
     margin-top: -35px;
-    opacity: 0;
+    opacity: 1;
     transition: all 0.3s;
 }
 
 .hero-content .swiper-button-prev{
     border-radius: 0 65px 65px 0;
-    left: 9px;
+    left: 50%;
 }
 
 .hero-content .swiper-button-next{
     border-radius: 65px 0 0 65px;
-    right: 9px;
+    right: 50%;
+}
+
+.hero-content .swiper-pagination {
+    bottom: auto;
+    top: 54%;
 }
 
 .hero-content .swiper-button-prev:hover, .hero-content .swiper-button-next:hover {
