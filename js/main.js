@@ -48,9 +48,9 @@ function renderCart() {
 
   document.querySelector('#cart-count').textContent = itemCount;
   document.querySelector('#drawer-count').textContent = itemCount;
-  cartDrawer.querySelectorAll('.cart-item, .cart-summary-line, .cart-total, .confirm-order').forEach((element) => element.remove());
+  cartDrawer.querySelectorAll('.cart-item, .confirm-order').forEach((element) => element.remove());
   cartDrawer.insertAdjacentHTML('beforeend', `${cart.map((item, index) => `
-    <article class="cart-item">
+    <div class="cart-item">
       <img src="${item.image}" alt="${item.name}">
       <div class="cart-item-info">
         <div class="cart-item-line"><h3>${item.name}</h3><strong>${money(item.price * item.quantity)}</strong></div>
@@ -60,11 +60,11 @@ function renderCart() {
           <button type="button" data-action="increase" data-index="${index}" aria-label="Aumentar cantidad">+</button>
         </div>
       </div>
-    </article>
+    </div>
   `).join('')}
-    <p class="cart-summary-line cart-subtotal-line"><span>Subtotal:</span><strong id="cart-subtotal">${money(subtotal)}</strong></p>
-    <p class="cart-summary-line cart-service-line"><span>Servicio (10%):</span><strong id="cart-service">${money(service)}</strong></p>
-    <p class="cart-summary-line cart-total"><span>Total:</span><strong id="cart-total">${money(subtotal + service)}</strong></p>
+    <div class="cart-item"><span>Subtotal:</span><strong id="cart-subtotal">${money(subtotal)}</strong></div>
+    <div class="cart-item"><span>Servicio (10%):</span><strong id="cart-service">${money(service)}</strong></div>
+    <div class="cart-item"><span>Total:</span><strong id="cart-total">${money(subtotal + service)}</strong></div>
     <button class="confirm-order" type="button">Confirmar Pedido</button>`);
 }
 
