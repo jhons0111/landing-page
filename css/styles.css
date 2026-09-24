@@ -372,6 +372,10 @@ footer{
     margin-right: 20px;
 }
 
+.cart-drawer > .cart-item strong, .cart-item .quantity-control span {
+    font-size: 15px;
+}
+
 .cart-drawer > .cart-header + .cart-item {
     margin-top: 18px;
 }
@@ -405,6 +409,10 @@ footer{
     border-top: 1px solid #000;
     font-size: 18px;
     padding-top: 10px;
+}
+
+#cart-total{
+    font-size: 18px !important;
 }
 
 .cart-drawer > .confirm-order {
