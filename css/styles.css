@@ -111,8 +111,9 @@ nav {
 
 .hero-content img {
     height: 100%;
-    width: 100%;
+    width: 110%;
     object-fit: fill;
+    transform: translateX(-10%);
 }
 
 .hero-content .text-content {
