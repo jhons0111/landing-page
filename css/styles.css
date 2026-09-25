@@ -513,6 +513,10 @@ footer{
 
 @media (max-width: 768px) {
 
+    .hero-content .text-content .btn {
+        transform: translateX(100vw);
+    }
+
     /* HEADER SECTION */
 
     header{
