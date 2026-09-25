@@ -565,19 +565,55 @@ footer{
     }
 
     .hero-content .text-content {
-        width: 92%;
-        padding: 0 10px;
+        width: 88%;
+        padding: 0 16px;
     }
 
     .text-content h2 {
-        font-size: 32px;
+        font-size: 36px;
+        line-height: 1.25;
+        margin-bottom: 12px;
+    }
+
+    .text-content p {
+        font-size: 18px;
+        margin-bottom: 22px;
+    }
+
+    .btn {
+        padding: 11px 24px;
+        font-size: 16px;
+    }
+
+    .hero-content .swiper-button-prev,
+    .hero-content .swiper-button-next {
+        height: 58px;
+        width: 40px;
+        margin-top: -29px;
+        --swiper-navigation-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content {
+        height: 65vh;
+        min-height: 400px;
+    }
+
+    .hero-content .text-content {
+        width: 86%;
+        padding: 0 12px;
+    }
+
+    .text-content h2 {
+        font-size: 28px;
         line-height: 1.25;
         margin-bottom: 10px;
     }
 
     .text-content p {
         font-size: 16px;
-        margin-bottom: 20px;
+        margin-bottom: 18px;
     }
 
     .btn {
@@ -587,41 +623,10 @@ footer{
 
     .hero-content .swiper-button-prev,
     .hero-content .swiper-button-next {
-        height: 50px;
-        width: 34px;
-        margin-top: -25px;
+        height: 52px;
+        width: 36px;
+        margin-top: -26px;
         --swiper-navigation-size: 16px;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-content {
-        height: 65vh;
-        min-height: 380px;
-    }
-
-    .text-content h2 {
-        font-size: 24px;
-        line-height: 1.25;
-        margin-bottom: 8px;
-    }
-
-    .text-content p {
-        font-size: 14px;
-        margin-bottom: 16px;
-    }
-
-    .btn {
-        padding: 9px 18px;
-        font-size: 14px;
-    }
-
-    .hero-content .swiper-button-prev,
-    .hero-content .swiper-button-next {
-        height: 42px;
-        width: 28px;
-        margin-top: -21px;
-        --swiper-navigation-size: 13px;
     }
 
     .hero-content .swiper-pagination {
@@ -632,35 +637,35 @@ footer{
 @media (max-width: 380px) {
     .hero-content {
         height: 60vh;
-        min-height: 350px;
+        min-height: 380px;
     }
 
     .hero-content .text-content {
-        width: 95%;
-        padding: 0 6px;
+        width: 86%;
+        padding: 0 8px;
     }
 
     .text-content h2 {
-        font-size: 20px;
+        font-size: 24px;
         line-height: 1.25;
-        margin-bottom: 6px;
+        margin-bottom: 8px;
     }
 
     .text-content p {
-        font-size: 13px;
-        margin-bottom: 14px;
+        font-size: 14.5px;
+        margin-bottom: 16px;
     }
 
     .btn {
-        padding: 8px 16px;
-        font-size: 13px;
+        padding: 9px 20px;
+        font-size: 14px;
     }
 
     .hero-content .swiper-button-prev,
     .hero-content .swiper-button-next {
-        height: 36px;
-        width: 24px;
-        margin-top: -18px;
-        --swiper-navigation-size: 11px;
+        height: 46px;
+        width: 32px;
+        margin-top: -23px;
+        --swiper-navigation-size: 14px;
     }
 }
