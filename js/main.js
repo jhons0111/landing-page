@@ -1,3 +1,55 @@
+// Compact navigation is enabled only at the narrow mobile breakpoint.
+const mobileNavigation = window.matchMedia('(max-width: 380px)');
+const navigation = document.querySelector('header nav');
+const navigationToggle = document.querySelector('.nav-toggle');
+const navigationLinks = document.querySelector('#primary-navigation');
+const mobileCart = document.querySelector('.mobile-cart');
+const navigationCart = document.querySelector('#cart-btn');
+const originalCartParent = navigationCart.parentElement;
+
+function setNavigationOpen(isOpen, restoreFocus = false) {
+  const open = mobileNavigation.matches && isOpen;
+  if (!open && (restoreFocus || navigationLinks.contains(document.activeElement))) {
+    navigationToggle.focus();
+  }
+  navigationToggle.setAttribute('aria-expanded', String(open));
+  navigationToggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+  navigationLinks.classList.toggle('is-open', open);
+  navigationLinks.inert = mobileNavigation.matches && !open;
+}
+
+function syncMobileNavigation() {
+  const toggleHadFocus = document.activeElement === navigationToggle;
+  const cartHadFocus = document.activeElement === navigationCart;
+  (mobileNavigation.matches ? mobileCart : originalCartParent).append(navigationCart);
+  setNavigationOpen(false);
+  if (cartHadFocus) navigationCart.focus();
+  if (!mobileNavigation.matches && toggleHadFocus) navigationLinks.querySelector('a').focus();
+}
+
+navigationToggle.addEventListener('click', () => {
+  setNavigationOpen(navigationToggle.getAttribute('aria-expanded') !== 'true');
+});
+document.addEventListener('click', (event) => {
+  if (mobileNavigation.matches && !navigation.contains(event.target)) setNavigationOpen(false);
+});
+navigationLinks.addEventListener('click', (event) => {
+  if (mobileNavigation.matches && event.target.closest('a')) setNavigationOpen(false);
+});
+navigationCart.addEventListener('click', () => {
+  if (mobileNavigation.matches) setNavigationOpen(false);
+});
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && navigationToggle.getAttribute('aria-expanded') === 'true') {
+    setNavigationOpen(false, true);
+  }
+});
+navigation.addEventListener('focusout', (event) => {
+  if (mobileNavigation.matches && !navigation.contains(event.relatedTarget)) setNavigationOpen(false);
+});
+mobileNavigation.addEventListener('change', syncMobileNavigation);
+syncMobileNavigation();
+
 //SWIPER SLIDER
 
 const swiper = new Swiper('.swiper', {

@@ -2,6 +2,10 @@
 
 Proyecto de una **página web en PHP, HTML y JavaScript** para un restaurante.  
 
+## Vista previa
+
+Visitá la versión publicada del sitio: [Ver preview de Restaurant Web](https://jhons0111.github.io/landing-page/).
+
 ---
 
 ## ⚙️ Requisitos
